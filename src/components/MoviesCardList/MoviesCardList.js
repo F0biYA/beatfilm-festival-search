@@ -13,6 +13,7 @@ function MoviesCardList(props) {
   const moviesCount = DECK_SIZE || TABLET_SIZE || MOBILE_SIZE;
   const [countMovies, setCountMovies] = useState(moviesCount);
   const [freeCell, setFreeCell] = useState(0);
+
   function resizeWindow() {
 
     const moviesCountResize = DECK_SIZE || TABLET_SIZE || MOBILE_SIZE
