@@ -1,0 +1,5 @@
+.photo-slider {
+  display: grid;
+  grid-template-columns: repeat(2,280px);
+  column-gap: 40px;
+}

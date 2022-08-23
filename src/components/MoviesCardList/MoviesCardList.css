@@ -1,6 +1,6 @@
 .moviesCardList {
   width: 100%;
-  padding: 70px 0 107px;
+  padding: 30px 0 80px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, 364px);

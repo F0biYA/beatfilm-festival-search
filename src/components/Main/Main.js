@@ -1,15 +1,13 @@
 import Header from '../Header/Header';
-import Promo from '../Promo/Promo';
 import Footer from '../Footer/Footer';
-import Techs from '../Techs/Techs';
 import AboutProject from '../AboutProject/AboutProject';
-import AboutMe from '../AboutMe/AboutMe';
-import Portfolio from '../Portfolio/Portfolio';
 import './Main.css';
 import { Link } from 'react-router-dom';
 import NavigationBar from '../NavigationBar/NavigationBar';
+import PromoExplorer from '../Promo/PromoExpoler/PromoExplorer';
+import Gallery from '../Gallery/Gallery';
 
-function Main({loggedIn}) {
+function Main({loggedIn, movie}) {
 
   return (
     <>
@@ -21,11 +19,9 @@ function Main({loggedIn}) {
           </>
           : <NavigationBar/>}
       />
-      <Promo />
+      <PromoExplorer/>
+      <Gallery movie={movie} />
       <AboutProject />
-      <Techs />
-      <AboutMe />
-      <Portfolio />
       <Footer />
     </>
   );

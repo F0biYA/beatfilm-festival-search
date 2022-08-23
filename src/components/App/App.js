@@ -206,7 +206,7 @@ function App() {
 
       <Routes>
         {/* Роуты без авторизации */}
-        <Route path="/" element={<Main loggedIn={loggedIn} />} />
+        <Route path="/" element={<Main loggedIn={loggedIn} movie={allMovies}/>} />
         <Route path="/signin" element={<Login handleLogin={handleLogin} />} />
         <Route path="/signup" element={<Register handleRegister={handleRegister} />} />
 
