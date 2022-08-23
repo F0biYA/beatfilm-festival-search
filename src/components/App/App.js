@@ -29,6 +29,18 @@ function App() {
   const [filteredSavedMovies, setFilteredSavedMovies] = useState([])
   const [shortSavedMovies, setShortSavedMovies] = useState(false);
 
+  // useEffect(() => {
+  //   moviesApi.getMovies()
+  //   .then((data) => {
+  //     setAllMovies(data);
+  //     setIsPreloader(true)
+  //     localStorage.setItem('movies-short', shortMovies)
+  //   })
+  //   .catch((err) => {
+  //     console.log(`Невозможно отобразить фильмы с сервера ${err}`)
+  //   })}, [])
+
+
   function filterMovie(searchValue) {
     const tempMovies = searchMovies(allMovies, searchValue);
     localStorage.setItem('search-movies', JSON.stringify(tempMovies));
@@ -76,6 +88,14 @@ function App() {
           console.log(`Невозможно отобразить сохранненые фильмы с сервера ${err}`)
         })
         .finally(() => setIsPreloader(false))
+    } else {
+      moviesApi.getMovies()
+      .then((data) => {
+        setAllMovies(data);
+      })
+      .catch((err) => {
+        console.log(`Невозможно отобразить фильмы с сервера ${err}`)
+      })
     }
   }, [loggedIn])
 
