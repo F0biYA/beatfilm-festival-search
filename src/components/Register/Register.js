@@ -99,6 +99,6 @@ function Register({ handleRegister }) {
       </form>
 
     </section>
-  : <Navigate to='/' />)
+  : <Navigate to='/movies' />)
 }
 export default Register;

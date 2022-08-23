@@ -74,7 +74,7 @@ function Login({ handleLogin }) {
       </form>
 
     </section >
-    : <Navigate to='/' />
+    : <Navigate to='/movies' />
   )
 }
 export default Login;
